@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+section{
+   background-image: linear-gradient(to top, #AB90DD, #6B21F8);
+}
+
+.inicio h1{
+    padding: 10px;
+    
+}
+
+#bozzeman img{
+    width: 320px;
+    height: 200px;
+}
+
+#Charleston img{
+    width: 320px;
+    height: 200px;
+}
+
+#constellation img{
+    width: 320px;
+    height: 200px;
+}
+#discovery img{
+    width: 320px;
+    height: 200px;
+}
+
+#equinox img{
+width: 320px;
+    height: 200px;}
