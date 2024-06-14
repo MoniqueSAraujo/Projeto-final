@@ -8,8 +8,23 @@ section{
    background-image: linear-gradient(to top, #AB90DD, #6B21F8);
 }
 
-.inicio h1{
-    padding: 10px;
+.inicio{
+    
+    padding: 30%;
+    background-image: url(img/frotas.jpg);
+  
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+
+
+}
+
+.inicio img{
+    width: 320px;
+    height: 200px;
+    border-radius: 30%;
+   
     
 }
 
