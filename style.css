@@ -4,148 +4,214 @@
     box-sizing: border-box;
     }
 
+    @import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
+
 body{
    background-image: linear-gradient(to top, #AB90DD, #6B21F8);
 }
 
 .inicio {
     background: url(img/frotas.jpg);
-    height: 100vh;
-  text-align: center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-
-}
-
-#titulo{
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-    font-size: 70px;
-    line-height: 60px;
+    height: 70vh;
     text-align: center;
-}
-
-.container{
-    width: 100%;
-    height: 100vh;
     background-size: cover;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
-    box-shadow: 0 0 10px 0 white;
-    transition: 0.4s ease;
 }
 
-.container input[type=radio]{
-        display: none;
+.container1{
+    display: inline-flex;
 }
-
-.container .card{
-    position: absolute;
-    width: 40%;
-    height: 80%;
+.container1 .estatico{
+    color: #d376fb;
+    font-size: 50px;
+    font-weight: 400;
+    align-items: center;
+    padding: 20px;
+    padding-left: 200px;
+}
+.container1 .dinamico{
+    margin-left: 15px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+.dinamico li{
+    color: rgb(51, 0, 181);
+    list-style: none;
+    font-size: 50px;
+    font-weight: 400;
     left: 0;
-    right: 0;
-    margin: 100px auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    box-shadow: 0 0 10px 0 rgba(21,111,195,0.5);
-    transition: 0.4s ease;
-    cursor: pointer;
-}
-.container .card img{
-    width: 70%;
-    height: 40%;
-    object-fit: initial;
-    border-radius: 10px;
-    margin-top: 140px;
-}
-
-.container .card h1{
-    position: absolute;
-    z-index: 9;
-    color: #000000;
-    font-size: 2rem;
-    margin-top: 60px;
-}
-.container .cards{
     position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+.dinamico li span::after{
+    content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
+    left: 0;
+    /* border-left: 2px solid rgb(198, 145, 255); */
+    animation: typing 1.5s steps(10 infinite);
+    /* background: rgb(151, 156, 253); */
+}
+.dinamico li span{
+    position: relative;
+}
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
 }
 
-#item-1:checked ~ .cards #song-3,
-#item-2:checked ~ .cards #song-1,
-#item-3:checked ~ .cards #song-2{
-    transform: translateX(-40%) scale(0.8);
-    opacity: 0.4;
-    z-index: 0;
-}
-#item-1:checked ~ .cards #song-2,
-#item-2:checked ~ .cards #song-3,
-#item-3:checked ~ .cards #song-1{
-    transform: translateX(40%) scale(0.8);
-    opacity: 0.4;
-    z-index: 0;
-}
-#item-1:checked ~ .cards #song-1,
-#item-2:checked ~ .cards #song-2,
-#item-3:checked ~ .cards #song-3{
-    transform: translateX(0) scale(1);
-    opacity: 1;
-    z-index: 1;
-}
-
-
-
-
-
-
-
- /* font-size: medium;
- text-align:right;
- text-decoration: solid;
- text-transform: uppercase;
- text-overflow: ellipsis;
-} */
-
-/* #bozzeman {
-    
-    justify-content: center;
-    text-align:  center;
-}
-#bozzeman h1{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    text-decoration: solid;
-    text-transform: uppercase;
-    text-overflow: ellipsis;
+/* 
+#titulo{
+    font-family:'Charmonman';
+    font-size: 40px;
+    line-height: 90px;
     text-align: center;
-
-}
-#bozzeman img{
-    width: 320px;
-    height: 200px;
+    padding-top: 20px;
+    padding-left: 150px;
 } */
 
-
-#Charleston img{
-    width: 320px;
-    height: 200px;
+.sub-titulo h1{
+    font-family: 'Charmonman';
+    font-size: 50px;
+    text-align: center;
+    padding-top: 50px ;
 }
 
-#constellation img{
-    width: 320px;
-    height: 200px;
-}
-#discovery img{
-    width: 320px;
-    height: 200px;
+.sub-titulo{
+    box-shadow: 0 0 10px 0 rgb(208, 195, 251);
 }
 
-#equinox img{
-width: 320px;
-    height: 200px;}
+.container {
+    display: flex;
+    gap: 10px;
+    padding: 10%;
+     
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card span{
+    text-align: center;
+    color: black;
+}
+
+.card img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: filter 0.2s, border 0.2s;
+}
+
+/* Efeito de hover */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para o card selecionado */
+input[type="radio"]:checked + .card img {
+    filter: grayscale(100%) brightness(0.8);
+    border: 3px solid #3498db;
+}
+
+
+.fotos h1{
+    text-align: center;
+    font-family: 'Charmonman';
+    font-size: 50px;
+    padding-bottom: 60px;
+    padding-top: 30px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,5vw);
+    grid-gap: 15px;
+}
+
+.galeria_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria_item--1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+ 
+.galeria_item--2{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.galeria_item--3{
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.galeria_item--4{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 7;
+
+}
+
+ .galeria_item--5{
+    grid-column-start: 1;
+    grid-column-end:3 ;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+
+.galeria_item--6{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 9;
+}
+
+.galeria_item--7{
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 9;
+
+}
+.galeria_item--8{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 9;
+
+}
