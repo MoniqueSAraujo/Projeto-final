@@ -4,13 +4,16 @@
     box-sizing: border-box;
     
     }
-
-     @import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
-    
+    @font-face {
+        font-family: "Squids.otf";
+        src:
+          url("game_of_squids/Game\ Of\ Squids.otf") format("truetype"),
+            url(game_of_squids/Game\ Of\ Squids.ttf) format("truetype")
+        }
 
 body{
    background-image: linear-gradient(to top, #AB90DD, #6B21F8);
-   font-family: 'Charmonman' ;
+   font-family: 'Squids.otf' ;
 }
 
 .inicio {
@@ -35,8 +38,8 @@ body{
 }
 .container1 .dinamico{
     margin-left: 15px;
-    line-height: 90px;
-    height: 90px;
+    line-height: 95px;
+    height: 100px;
     overflow: hidden;
 }
 .dinamico li{
@@ -85,21 +88,39 @@ body{
 } */
 
 .sub-titulo h1{
-    font-family: 'Charmonman';
+    font-family: 'Squids.otf';
     font-size: 50px;
     text-align: center;
     padding-top: 50px ;
-    color: white;
+    color: #AB90DD;
+    text-shadow: 0.1em 0.1em 0.05em #333;
 }
 
 .sub-titulo{
     box-shadow: 0 0 10px 0 rgb(208, 195, 251);
 }
 
+/* .nomes ul{
+    display: flex;
+    text-align: center;
+    color: black;
+    font-size: 10px;
+    list-style: none;
+    gap: 80px;
+    padding-left: 50px;
+    padding-top: 50px ;
+
+} */
+
 .container {
     display: flex;
     gap: 10px;
-    padding: 10%;
+    padding-bottom: 100px;
+    padding-top: 70px;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+   
      
 }
 
@@ -121,7 +142,7 @@ body{
 
 .card img {
     width: 100%;
-    height: 90%;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
     transition: filter 0.2s, border 0.2s;
@@ -129,7 +150,7 @@ body{
 
 /* Efeito de hover */
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
@@ -142,11 +163,12 @@ input[type="radio"]:checked + .card img {
 
 .fotos h1{
     text-align: center;
-    font-family: 'Charmonman';
+    font-family: 'Squids.otf';
     font-size: 50px;
     padding-bottom: 60px;
     padding-top: 30px;
-    color: white;
+    color: #AB90DD;
+    text-shadow: 0.1em 0.1em 0.05em #333;
 }
 
 .galeria {
@@ -154,7 +176,12 @@ input[type="radio"]:checked + .card img {
     grid-template-columns: repeat(8,1fr);
     grid-template-rows: repeat(8,5vw);
     grid-gap: 15px;
+    
 }
+
+.galeria_img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);}
 
 .galeria_img{
     width: 100%;
@@ -219,6 +246,44 @@ input[type="radio"]:checked + .card img {
     grid-row-start: 5;
     grid-row-end: 9;
 
+}
+
+
+
+
+.container5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+    align-items: flex-end;
+    margin-top: 100px; /*O conteudo fica mais abaixo da tela*/
+}
+
+footer div ul li a {
+    text-decoration: none;
+}
+
+.f1 ul, .f2 ul, .f3 ul {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+}
+
+.midia ul li{
+    display: inline-block;
+}
+
+.copy{
+    margin-top: 100px; /*O conteudo fica mais abaixo da tela*/
+    text-align: center;
+}
+
+.copy a{
+    margin-right: 15px;/*afasta os itens*/
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 
